@@ -1,0 +1,50 @@
+package gradeConverter;
+
+import java.util.Scanner;
+
+public class GradeConverter {
+
+	public static void main(String[] args) {
+
+		String keepGoing = "y";
+		int grade;
+
+		// Output the program's welcome
+		System.out.println("Welcome to the Letter Grade Converter");
+		System.out.println();
+		
+		// Prompt user to continue
+		while (keepGoing != "n") {
+
+			// Prompt user for numerical grade
+			System.out.print("Enter numerical grade: ");
+			Scanner input = new Scanner(System.in);
+			grade = input.nextInt();
+
+			// Calculate grade
+			if (grade > 90) {
+				System.out.println("Letter grade: A");
+			} else if (grade > 80 && grade < 89) {
+				System.out.println("Letter grade: B");
+			} else if (grade > 70 && grade < 79) {
+				System.out.println("Letter grade: C");
+			} else if (grade > 59 && grade < 69) {
+				System.out.println("Letter grade: D");
+			} else if (grade < 59) {
+				System.out.println("Letter grade: F");
+			}
+
+			// Prompt user to keep going
+			System.out.println("Continue? (y/n): ");
+			keepGoing = input.nextLine(); 
+			
+			
+
+
+		}
+		
+		System.out.println("Bye!!");
+		
+	}
+
+}
